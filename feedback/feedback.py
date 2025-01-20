@@ -16,6 +16,7 @@ from xblock.core import XBlock
 from xblock.fields import Scope, Integer, String, List, Float, Boolean
 
 from feedback.utils import _
+from edx_django_utils.plugins import pluggable_override
 
 try:
     from xblock.utils.resources import ResourceLoader
@@ -372,6 +373,7 @@ class FeedbackXBlock(XBlock):
         self.vote_aggregate[self.user_vote] += 1
 
     @XBlock.json_handler
+    @pluggable_override("OVERRIDE_FEEDBACK_HANDLER")
     def feedback(self, data, suffix=''):  # pylint: disable=unused-argument
         '''
         Allow students to submit feedback, both numerical and
