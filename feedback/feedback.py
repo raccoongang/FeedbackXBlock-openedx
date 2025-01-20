@@ -39,7 +39,7 @@ DEFAULT_PLACEHOLDER = _(
     "you better understand and remember material from "
     "this course."
 )
-DEFAULT_ICON = "face"
+DEFAULT_ICON = "star"
 DEFAULT_SCALETEXT = [_("Excellent"), _("Good"), _("Average"), _("Fair"), _("Poor")]
 
 # Unicode alt faces are cute, but we do nulls instead for a11y.

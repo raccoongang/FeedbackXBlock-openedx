@@ -32,7 +32,7 @@
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 11px;
 }
 
 /* Hide checked icon */
@@ -47,6 +47,7 @@
 /* But show it if we are checked... */
 .feedback_block input[type="radio"]:checked ~ .feedback_icon_active {
     display: inline-block;
+    border: 1px solid #ffc701;
 }
 
 /* ... while hiding the unchecked icon */
@@ -57,13 +58,21 @@
 .feedback_icon {
     border: 1px solid rgba(255, 255, 255, 0);
     padding: 1px;
-    height: 60px;
-    width: 60px;
+    height: 63px;
+    width: 63px;
+    border-radius: 12px;
 }
 
-.feedback_block input[type="radio"]:focus ~ .feedback_icon,
+.feedback_icon img {
+    max-width: 100%;
+}
+
+.feedback_block input[type="radio"]:focus ~ .feedback_icon {
+    border-color: #ffc701 !important;
+}
+
 .feedback_block input[type="radio"]:hover ~ .feedback_icon {
-    border-color: #999;
+    border-color: #e5e5e5;
 }
 
 .feedback_block .feedback_likert_label {
